@@ -1,0 +1,179 @@
+/* CSS reset  */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height:59px;
+}
+
+body{
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Nevigation bar */
+#navbar{
+    position: relative;
+    top: 0px;
+    display: flex;
+    align-items: center;
+}
+
+/* Nevigation bar: logo and image  */
+#logo{
+    margin: 10px 15px;
+}
+#logo img{
+    margin: 5px 10px;
+}
+
+/*Nevigation bar: list styling  */
+ul{
+    display: flex;
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;    
+}
+li{
+    list-style: none;
+    font-size: 1.3rem;
+}
+li a{
+    font-family:'Baloo Bhai',cursive;
+    display: block;
+    padding:3px 22px ;
+    color: rgb(220, 51, 45);
+    text-decoration: none;
+    cursor:pointer;
+}
+li a:hover{
+    color: rgb(198, 198, 198);
+    font-size: 1.6rem;
+}
+
+/* home section  */
+
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{
+    content: "";
+    background: url('../img/body2.jpg') no-repeat center center/cover;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+#home h1{
+    font-size: 2.3rem;
+    padding: 12px;
+    /* font-family:'Baloo Bhai',cursive; */
+    color:rgb(208, 208, 59);
+    /* text-decoration: underline; */
+    
+}
+
+#home p{
+    font-family:'Baloo Bhai',cursive;
+    color:rgb(223, 223, 222);
+    text-align: center;
+    font-size: 1.2rem;
+    
+}
+
+/* button  */
+
+.btn{
+    font-size: 1.2rem;
+    margin-top: 15px;
+    padding: 5px 10px;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: brown;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    color: rgb(206, 195, 195);
+    font-size: 1.6rem;
+}
+
+/* services section  */
+
+#services{
+    display: grid;
+    grid-template-rows:repeat(auto-fit,1fr);
+}
+#img1{
+    height: 400px;
+}
+#img2{
+    height: 400px;
+    width: 500px;
+}
+#img3{
+    height: 400px;
+    width: 450px;
+}
+.name{
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+}
+
+#name1{
+    margin-right:120px;
+}
+#name2{
+    margin-right:120px;
+}
+#name3{
+    margin-right:60px;
+}
+
+/* utility classes  */
+
+.h-primary{
+    margin-top: 90px;
+    font-size: 2rem;
+    padding: 12px;
+    color:rgb(114, 74, 74);
+   
+}
+
+.h-secondary{
+    font-size: 1.7rem;
+    padding: 12px;
+    color:rgb(158, 124, 124);
+}
+
+.center{
+    text-align: center;
+}
+
+.hsg-footer__social li a span {
+    position: absolute;
+    left: -10000px;
+}
+
+.hsg-icon-facebook:before {
+    content: "\E01C";
+}
